@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { I18nService, Lang } from '../../services/i18n.service';
 import { TranslatePipe } from '../../services/translate.pipe';
 
-export const GITHUB_REPO = 'https://github.com/sfmrbb/Calendario';
+export const GITHUB_REPO = 'https://github.com/Serwii01/ProCalendar';
 
 @Component({
   selector: 'app-header',

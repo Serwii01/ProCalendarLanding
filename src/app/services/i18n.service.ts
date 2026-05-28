@@ -2,7 +2,7 @@ import { Injectable, computed, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 
-export type Lang = 'es' | 'en';
+export type Lang = 'es' | 'en' | 'zh-CN';
 
 const LS_KEY = 'procalendar.lang';
 
@@ -12,9 +12,10 @@ export class I18nService {
 
   /** Idiomas soportados. Para añadir uno nuevo, crea assets/i18n/<code>.json y añádelo aquí. */
   readonly available: { code: Lang; label: string; flag: string }[] = [
-    { code: 'es', label: 'Español', flag: '🇪🇸' },
-    { code: 'en', label: 'English', flag: '🇬🇧' }
-  ];
+  { code: 'es', label: 'Español',  flag: '🇪🇸' },
+  { code: 'en', label: 'English',  flag: '🇬🇧' },
+  { code: 'zh-CN', label: '中文',  flag: '🇨🇳' },
+];
 
   /** Diccionarios cargados, indexados por idioma. */
   private dicts = new Map<Lang, Record<string, string>>();

@@ -1,0 +1,303 @@
+/* Hero ===================================================================== */
+.legal-hero .hero-inner { text-align: center; }
+
+.icon-stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px; height: 64px;
+  border-radius: 18px;
+  background: var(--surface);
+  color: var(--primary);
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--line);
+}
+.icon-stamp svg { width: 30px; height: 30px; }
+
+.legal-hero .legal-intro {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Layout: TOC sticky + article ============================================== */
+.legal-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.legal-toc {
+  position: sticky;
+  top: 84px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.toc-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.legal-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.legal-toc a {
+  display: block;
+  padding: 7px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-soft);
+  border-radius: 8px;
+  border-left: 2px solid transparent;
+}
+
+.legal-toc a:hover {
+  background: var(--bg-soft);
+  color: var(--primary);
+  border-left-color: var(--primary);
+  text-decoration: none;
+}
+
+/* Artículo ================================================================= */
+.legal-article {
+  max-width: 720px;
+}
+
+.legal-article section {
+  margin-bottom: 40px;
+  scroll-margin-top: 90px;   /* para que anclas no queden bajo el header sticky */
+}
+
+.sec-h {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+}
+
+.sec-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; height: 32px;
+  border-radius: 10px;
+  background: var(--primary-soft);
+  color: var(--primary-strong);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.legal-article p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-soft);
+  margin: 0 0 14px;
+}
+
+/* Data cards =============================================================== */
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.data-card {
+  background: linear-gradient(180deg, #eff2ff 0%, #f6f7ff 100%);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.data-card.alt {
+  background: linear-gradient(180deg, #ecfdf5 0%, #f0fdf4 100%);
+}
+
+.data-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.data-card-head svg { width: 18px; height: 18px; color: var(--primary-strong); }
+.data-card.alt .data-card-head svg { color: #047857; }
+
+.data-card-head strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-strong);
+}
+.data-card.alt .data-card-head strong { color: #047857; }
+
+.data-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Check list =============================================================== */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text-soft);
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.check {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary-strong);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.check svg { width: 12px; height: 12px; }
+
+/* Callout (Seguridad) ====================================================== */
+.callout {
+  background: #0f172a;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  color: #fff;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.callout::after {
+  content: "";
+  position: absolute;
+  right: -40px; bottom: -40px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79,70,229,.5) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.callout-icon {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.1);
+  color: #a5b4fc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.callout-icon svg { width: 22px; height: 22px; }
+
+.callout .sec-h { color: #fff; margin: 0 0 8px; position: relative; z-index: 1; }
+.callout .sec-num { background: rgba(255,255,255,.12); color: #fff; }
+.callout p { color: rgba(255,255,255,.78); position: relative; z-index: 1; margin: 0; }
+
+/* Rights pills ============================================================= */
+.rights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.right-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.right-pill svg {
+  width: 16px; height: 16px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* Contact card ============================================================= */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--primary);
+  border-radius: 12px;
+  margin-top: 14px;
+  transition: box-shadow .2s, transform .15s;
+}
+
+.contact-card:hover {
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.contact-card svg {
+  width: 28px; height: 28px;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.contact-card strong { display: block; font-size: 14px; }
+.contact-card span { display: block; font-size: 12px; color: var(--muted); }
+
+/* Responsive =============================================================== */
+@media (max-width: 900px) {
+  .legal-layout { grid-template-columns: 1fr; gap: 24px; }
+  .legal-toc { position: static; }
+  .legal-toc ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .data-grid { grid-template-columns: 1fr; }
+  .callout { flex-direction: column; padding: 22px; }
+  .sec-h { font-size: 19px; }
+}
