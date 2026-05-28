@@ -1,0 +1,121 @@
+.hero-help {
+  background: linear-gradient(180deg, #eff2ff 0%, var(--bg) 100%);
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+.hero-help h1 { margin-bottom: 12px; }
+.hero-help p { max-width: 720px; font-size: 16px; }
+
+.help-content {
+  padding: 48px 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.help-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.help-card-head h2 { font-size: 22px; }
+
+.logo-bubble {
+  width: 44px; height: 44px;
+  background: var(--bg-soft);
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-bubble.dark { background: var(--text); }
+
+.intro {
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  counter-reset: none;
+}
+.steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--text-soft);
+}
+.steps code {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+  background: var(--bg-soft);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--primary-strong);
+}
+.step-n {
+  flex-shrink: 0;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.tip {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+}
+.tip.warn {
+  background: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+/* Problems table */
+.problems table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.problems th, .problems td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.problems th {
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.problems td:last-child { color: var(--text-soft); }
+.problems h2 { margin-bottom: 18px; font-size: 22px; }
+
+@media (max-width: 640px) {
+  .problems table, .problems thead, .problems tbody, .problems tr, .problems td, .problems th { display: block; }
+  .problems thead { display: none; }
+  .problems tr { border-bottom: 1px solid var(--line); padding: 12px 0; }
+  .problems td { border: none; padding: 4px 0; }
+}

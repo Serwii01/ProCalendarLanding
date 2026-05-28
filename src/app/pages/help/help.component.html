@@ -1,0 +1,75 @@
+<section class="hero-help">
+  <div class="container">
+    <h1>{{ 'help.title' | t }}</h1>
+    <p>{{ 'help.subtitle' | t }}</p>
+  </div>
+</section>
+
+<section class="container help-content">
+  <!-- GOOGLE -->
+  <article class="help-card card">
+    <div class="help-card-head">
+      <div class="logo-bubble">
+        <svg width="22" height="22" viewBox="0 0 24 24"><path fill="#4285f4" d="M22.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.4h5.9c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-1.9 3.3-4.8 3.3-8.3z"/><path fill="#34a853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.8 0-5.2-1.9-6.1-4.5H2.2v2.8C4 20.5 7.7 23 12 23z"/><path fill="#fbbc04" d="M5.9 14c-.3-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3V6.5H2.2C1.4 8 1 9.9 1 11.7s.4 3.7 1.2 5.3L5.9 14z"/><path fill="#ea4335" d="M12 5.4c1.6 0 3 .5 4.1 1.5l3.1-3.1C17.5 2.2 15 1 12 1 7.7 1 4 3.5 2.2 6.5L5.9 9.3C6.8 6.7 9.2 5.4 12 5.4z"/></svg>
+      </div>
+      <h2>{{ 'help.google.title' | t }}</h2>
+    </div>
+    <ol class="steps">
+      <li><span class="step-n">1</span> {{ 'help.google.step1' | t }}</li>
+      <li><span class="step-n">2</span> {{ 'help.google.step2' | t }}</li>
+      <li><span class="step-n">3</span> {{ 'help.google.step3' | t }}</li>
+      <li><span class="step-n">4</span> {{ 'help.google.step4' | t }} <br><code>http://localhost:8080/login/oauth2/code/google</code></li>
+      <li><span class="step-n">5</span> {{ 'help.google.step5' | t }}</li>
+    </ol>
+    <div class="tip warn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      {{ 'help.google.warning' | t }}
+    </div>
+  </article>
+
+  <!-- ICLOUD -->
+  <article class="help-card card">
+    <div class="help-card-head">
+      <div class="logo-bubble dark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+      </div>
+      <h2>{{ 'help.icloud.title' | t }}</h2>
+    </div>
+    <p class="intro">{{ 'help.icloud.intro' | t }}</p>
+    <ol class="steps">
+      <li><span class="step-n">1</span> {{ 'help.icloud.step1' | t }}</li>
+      <li><span class="step-n">2</span> {{ 'help.icloud.step2' | t }}</li>
+      <li><span class="step-n">3</span> {{ 'help.icloud.step3' | t }}</li>
+      <li><span class="step-n">4</span> {{ 'help.icloud.step4' | t }}</li>
+      <li><span class="step-n">5</span> {{ 'help.icloud.step5' | t }}</li>
+    </ol>
+  </article>
+
+  <!-- COMMON PROBLEMS -->
+  <article class="help-card card problems">
+    <h2>{{ 'help.problems.title' | t }}</h2>
+    <table>
+      <thead>
+        <tr><th>Error</th><th>Solución</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>{{ 'help.problems.error401.title' | t }}</strong></td>
+          <td>{{ 'help.problems.error401.solution' | t }}</td>
+        </tr>
+        <tr>
+          <td><strong>{{ 'help.problems.sync.title' | t }}</strong></td>
+          <td>{{ 'help.problems.sync.solution' | t }}</td>
+        </tr>
+        <tr>
+          <td><strong>{{ 'help.problems.timeout.title' | t }}</strong></td>
+          <td>{{ 'help.problems.timeout.solution' | t }}</td>
+        </tr>
+        <tr>
+          <td><strong>{{ 'help.problems.denied.title' | t }}</strong></td>
+          <td>{{ 'help.problems.denied.solution' | t }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+</section>
