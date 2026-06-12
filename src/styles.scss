@@ -2,6 +2,7 @@
    Pro Calendar Landing - global styles
    ============================================================================= */
 :root {
+  /* Paleta clara (por defecto) */
   --bg: #f4f5fb;
   --bg-soft: #eef1ff;
   --surface: #ffffff;
@@ -19,6 +20,37 @@
   --radius: 12px;
   --radius-lg: 20px;
   --container: 1180px;
+
+  /* Header glass */
+  --hdr-bg: rgba(255, 255, 255, 0.85);
+
+  /* Fondo de cabeceras (hero, legal, help). Mismo gradient en claro, plano en oscuro. */
+  --hero-bg: linear-gradient(180deg, #eff2ff 0%, #f4f5fb 100%);
+  --section-download-bg: linear-gradient(180deg, #f4f5fb 0%, #eef1ff 100%);
+
+  color-scheme: light;
+}
+
+/* Paleta oscura */
+[data-theme="dark"] {
+  --bg: #0b0d12;
+  --bg-soft: #131722;
+  --surface: #161a25;
+  --surface-elev: #1e2230;
+  --primary: #818cf8;
+  --primary-strong: #a5b4fc;
+  --primary-soft: rgba(99, 102, 241, 0.18);
+  --text: #f2f4f8;
+  --text-soft: #c2c7d1;
+  --muted: #8b8e96;
+  --line: rgba(255, 255, 255, 0.10);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.3), 0 0 0 .5px rgba(255,255,255,.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.4);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,.55);
+
+  --hdr-bg: rgba(11, 13, 18, 0.85);
+
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -147,6 +179,142 @@ p { line-height: 1.65; color: var(--text-soft); margin: 0; }
 @media (max-width: 768px) {
   .section { padding: 56px 0; }
   .section-sub { margin-bottom: 32px; }
+}
+
+/* =============================================================================
+   Dark mode overrides para zonas con gradients / colores hardcoded
+   ============================================================================= */
+[data-theme="dark"] {
+  /* Quita gradientes — fondo plano oscuro en todas las cabeceras */
+  .hero,
+  .section-download,
+  .legal-hero,
+  .hero-help {
+    background: var(--bg);
+  }
+  .section-showcase { background: var(--surface); }
+
+  /* Hero badge legible en dark */
+  .hero-badge {
+    background: rgba(129, 140, 248, 0.16);
+    color: #c7d2fe;
+  }
+
+  /* Texto del hero y subtítulos */
+  .hero-sub,
+  .section-sub,
+  .legal-intro,
+  .hero-help p { color: var(--text-soft); }
+
+  /* Mockup del calendario en hero */
+  .mock-window       { background: var(--surface); border-color: var(--line); }
+  .mock-titlebar     { background: var(--surface-elev); border-color: var(--line); }
+  .mock-title        { color: var(--muted); }
+  .mock-sidebar      { background: var(--surface-elev); border-color: var(--line); }
+  .mock-name         { color: var(--text); }
+  .mock-meta         { color: var(--muted); }
+  .mock-section      { color: var(--muted); }
+  .mock-nav-item     { color: var(--text-soft); }
+  .mock-toolbar .mock-h   { color: var(--text); }
+  .mock-toolbar .mock-sub { color: var(--muted); }
+  .mock-cell         { background: var(--surface); border-color: var(--line); }
+  .mock-dow          { background: var(--surface); border-color: var(--line); color: var(--text); }
+  .mock-dow-name     { color: var(--muted); }
+  .mock-right        { background: var(--surface-elev); border-color: var(--line); }
+  .mock-rp-title     { color: var(--text); }
+  .mock-todo         { background: var(--surface); }
+  .mock-todo-title   { color: var(--text); }
+  .mock-nav-controls { background: var(--surface); border-color: var(--line); }
+  .mock-nav-controls button { color: var(--text-soft); }
+  .mock-time         { color: var(--muted); }
+  .mock-grid         { border-color: var(--line); }
+  .mock-check        { border-color: rgba(255,255,255,.25); }
+
+  /* Title-bar del showcase (las capturas) */
+  .win-titlebar {
+    background: linear-gradient(180deg, #20253a 0%, #161b2a 100%);
+    border-color: var(--line);
+  }
+  .win-title { color: var(--muted); }
+  .shot           { background: var(--surface); border-color: var(--line); }
+  .shot img       { background: var(--surface-elev); }
+  .shot figcaption { background: var(--surface-elev); color: var(--text-soft); border-color: var(--line); }
+
+  /* Feature light cards: hacer fondos visibles sobre dark */
+  .feature-light { background: var(--surface); border-color: var(--line); }
+  .feature-light h3 { color: var(--text); }
+  .feature-light p  { color: var(--text-soft); }
+
+  /* Download cards */
+  .dl-card        { background: var(--surface); border-color: var(--line); }
+  .dl-card p      { color: var(--text-soft); }
+  .dl-card .dl-icon { background: rgba(129,140,248,.18); color: var(--primary-strong); }
+  .dl-card.highlighted {
+    border-color: var(--primary);
+    box-shadow: 0 12px 32px rgba(129,140,248,.22);
+  }
+
+  /* Botones ghost en dark */
+  .btn.ghost      { background: var(--surface); color: var(--text); border-color: var(--line); }
+  .btn.ghost:hover{ background: var(--surface-elev); }
+
+  /* Tabla problemas (ayuda) */
+  .problems th    { color: var(--muted); }
+  .problems td    { color: var(--text); border-color: var(--line); }
+  .problems td:last-child { color: var(--text-soft); }
+
+  /* Tip warn (ayuda) */
+  .tip.warn {
+    background: rgba(251, 191, 36, .10);
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, .25);
+  }
+
+  /* Data cards (privacidad) */
+  .data-card {
+    background: linear-gradient(180deg, rgba(99,102,241,.14) 0%, rgba(99,102,241,.04) 100%);
+    border-color: rgba(129,140,248,.22);
+  }
+  .data-card.alt {
+    background: linear-gradient(180deg, rgba(52,211,153,.16) 0%, rgba(52,211,153,.04) 100%);
+    border-color: rgba(52,211,153,.22);
+  }
+  .data-card-head strong { color: #c7d2fe; }
+  .data-card.alt .data-card-head strong { color: #6ee7b7; }
+  .data-card.alt .data-card-head svg     { color: #6ee7b7; }
+  .data-card p   { color: var(--text-soft); }
+
+  /* Check list & rights pills */
+  .check-list li { background: var(--surface); border-color: var(--line); color: var(--text); }
+  .check         { background: rgba(129,140,248,.18); color: #c7d2fe; }
+  .right-pill    { background: var(--surface); border-color: var(--line); color: var(--text); }
+
+  /* TOC */
+  .legal-toc     { background: var(--surface); border-color: var(--line); }
+  .legal-toc a:hover { background: var(--surface-elev); color: var(--primary-strong); }
+  .sec-num       { background: rgba(129,140,248,.18); color: #c7d2fe; }
+
+  /* Contact card */
+  .contact-card  { background: var(--surface); border-color: var(--line); }
+  .contact-card svg { color: var(--text); }
+
+  /* Help logo-bubble (light) */
+  .logo-bubble   { background: var(--surface-elev); }
+
+  /* Callout (Seguridad) — ya es dark, mejor contraste */
+  .callout       { background: #06080f; border: 1px solid var(--line); }
+  .callout p     { color: rgba(255,255,255,.82); }
+
+  /* Icon stamp del privacy hero */
+  .icon-stamp    { background: var(--surface); border-color: var(--line); }
+
+  /* Footer */
+  .ftr           { background: var(--surface); border-color: var(--line); }
+
+  /* Step number en help */
+  .step-n        { background: var(--primary); color: #fff; }
+  .steps li      { color: var(--text-soft); }
+  .steps code    { background: var(--surface-elev); color: var(--primary-strong); }
 }
 
 /* =============================================================================

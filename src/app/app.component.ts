@@ -1,8 +1,7 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { I18nService } from './services/i18n.service';
 
 @Component({
   selector: 'app-root',
@@ -15,11 +14,4 @@ import { I18nService } from './services/i18n.service';
   `,
   styles: [`main { min-height: calc(100vh - 200px); }`]
 })
-export class AppComponent implements OnInit {
-  private i18n = inject(I18nService);
-
-  ngOnInit(): void {
-    // Cargar idioma inicial (localStorage o navegador, fallback a 'es')
-    this.i18n.init();
-  }
-}
+export class AppComponent {}

@@ -146,25 +146,71 @@
 <!-- SHOWCASE: capturas reales del calendario en funcionamiento ================ -->
 <section class="section section-showcase" id="showcase">
   <div class="container">
-    <h2 class="section-title">La app en acción</h2>
-    <p class="section-sub">Diseñada con el detalle que esperas de macOS, en cualquier sistema operativo.</p>
+    <h2 class="section-title">{{ 'showcase.title' | t }}</h2>
+    <p class="section-sub">{{ 'showcase.sub' | t }}</p>
 
     <div class="showcase-grid">
       <figure class="shot wide">
-        <img src="assets/images/calendar-week.png" alt="Vista semanal con eventos sincronizados" loading="lazy">
-        <figcaption>Vista semanal con eventos hora-a-hora</figcaption>
+        <div class="win-titlebar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="win-title">{{ 'showcase.week' | t }}</span>
+        </div>
+        <img src="assets/images/calendar-week.png" [alt]="'showcase.week' | t" loading="lazy">
+        <figcaption>{{ 'showcase.week' | t }}</figcaption>
       </figure>
+
       <figure class="shot">
-        <img src="assets/images/calendar-month.png" alt="Vista mensual" loading="lazy">
-        <figcaption>Vista mensual</figcaption>
+        <div class="win-titlebar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="win-title">{{ 'showcase.day' | t }}</span>
+        </div>
+        <img src="assets/images/calendar-day.png" [alt]="'showcase.day' | t" loading="lazy">
+        <figcaption>{{ 'showcase.day' | t }}</figcaption>
       </figure>
+
       <figure class="shot">
-        <img src="assets/images/calendar-tasks.png" alt="Gestor de tareas" loading="lazy">
-        <figcaption>Gestor de tareas integrado</figcaption>
+        <div class="win-titlebar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="win-title">{{ 'showcase.month' | t }}</span>
+        </div>
+        <img src="assets/images/calendar-month.png" [alt]="'showcase.month' | t" loading="lazy">
+        <figcaption>{{ 'showcase.month' | t }}</figcaption>
       </figure>
+
       <figure class="shot wide">
-        <img src="assets/images/calendar-create.png" alt="Modal de creación de evento" loading="lazy">
-        <figcaption>Crear evento con asignación de calendario</figcaption>
+        <div class="win-titlebar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="win-title">{{ 'showcase.tasks' | t }}</span>
+        </div>
+        <img src="assets/images/calendar-tasks.png" [alt]="'showcase.tasks' | t" loading="lazy">
+        <figcaption>{{ 'showcase.tasks' | t }}</figcaption>
+      </figure>
+
+      <figure class="shot dialog">
+        <div class="win-titlebar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="win-title">{{ 'showcase.create' | t }}</span>
+        </div>
+        <img src="assets/images/calendar-create.png" [alt]="'showcase.create' | t" loading="lazy">
+        <figcaption>{{ 'showcase.create' | t }}</figcaption>
+      </figure>
+
+      <figure class="shot dialog">
+        <div class="win-titlebar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="win-title">{{ 'showcase.accounts' | t }}</span>
+        </div>
+        <img src="assets/images/settings-accounts.png" [alt]="'showcase.accounts' | t" loading="lazy">
+        <figcaption>{{ 'showcase.accounts' | t }}</figcaption>
+      </figure>
+
+      <figure class="shot dialog">
+        <div class="win-titlebar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="win-title">{{ 'showcase.sync' | t }}</span>
+        </div>
+        <img src="assets/images/settings-sync.png" [alt]="'showcase.sync' | t" loading="lazy">
+        <figcaption>{{ 'showcase.sync' | t }}</figcaption>
       </figure>
     </div>
   </div>
@@ -183,7 +229,7 @@
         </div>
         <h3>{{ 'download.installer.title' | t }}</h3>
         <p>{{ 'download.installer.desc' | t }}</p>
-        <a class="btn ghost" href="https://github.com/sfmrbb/Calendario/releases/latest" target="_blank" rel="noopener">ProCalendarSetup.exe</a>
+        <a class="btn ghost" href="https://github.com/Serwii01/ProCalendar/tree/master/releases" target="_blank" rel="noopener">ProCalendar-Setup-1.0.0.exe</a>
       </div>
 
       <div class="dl-card highlighted">
@@ -193,16 +239,16 @@
         </div>
         <h3>{{ 'download.portable.title' | t }}</h3>
         <p>{{ 'download.portable.desc' | t }}</p>
-        <a class="btn" href="https://github.com/sfmrbb/Calendario/releases/latest" target="_blank" rel="noopener">ProCalendarPortable.exe</a>
+        <a class="btn" href="https://github.com/Serwii01/ProCalendar/tree/master/releases" target="_blank" rel="noopener">ProCalendar-Portable-1.0.0.exe</a>
       </div>
 
       <div class="dl-card">
         <div class="dl-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 7h-4V3H8v4H4l8 8 8-8zM4 19h16v2H4z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
-        <h3>{{ 'download.msi.title' | t }}</h3>
-        <p>{{ 'download.msi.desc' | t }}</p>
-        <a class="btn ghost" href="https://github.com/sfmrbb/Calendario/releases/latest" target="_blank" rel="noopener">ProCalendarEnterprise.msi</a>
+        <h3>{{ 'download.docs.title' | t }}</h3>
+        <p>{{ 'download.docs.desc' | t }}</p>
+        <a class="btn ghost" [href]="docsUrl()" target="_blank" rel="noopener">{{ 'download.docs.cta' | t }}</a>
       </div>
     </div>
   </div>

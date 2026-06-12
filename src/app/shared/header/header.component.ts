@@ -2,6 +2,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { I18nService, Lang } from '../../services/i18n.service';
+import { ThemeService } from '../../services/theme.service';
 import { TranslatePipe } from '../../services/translate.pipe';
 
 export const GITHUB_REPO = 'https://github.com/Serwii01/ProCalendar';
@@ -14,12 +15,13 @@ export const GITHUB_REPO = 'https://github.com/Serwii01/ProCalendar';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  i18n = inject(I18nService);
+  i18n  = inject(I18nService);
+  theme = inject(ThemeService);
   githubUrl = GITHUB_REPO;
+
   menuOpen = signal(false);
   langOpen = signal(false);
 
-  // Bandera del idioma activo, computed para evitar arrow functions en template
   currentFlag = computed(() => {
     const code = this.i18n.current();
     const entry = this.i18n.available.find(a => a.code === code);
@@ -27,6 +29,9 @@ export class HeaderComponent {
   });
 
   currentCode = computed(() => this.i18n.current().toUpperCase());
+
+  /** Indica si el tema EFECTIVO (resolviendo auto) es oscuro. */
+  isDark = computed(() => this.theme.effective() === 'dark');
 
   toggleMenu() { this.menuOpen.update(v => !v); }
   closeMenu() { this.menuOpen.set(false); }
@@ -36,8 +41,7 @@ export class HeaderComponent {
     await this.i18n.set(l);
     this.langOpen.set(false);
   }
+  isActiveLang(code: Lang): boolean { return this.i18n.current() === code; }
 
-  isActiveLang(code: Lang): boolean {
-    return this.i18n.current() === code;
-  }
+  toggleTheme() { this.theme.toggle(); }
 }

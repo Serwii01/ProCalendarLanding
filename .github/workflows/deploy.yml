@@ -2,7 +2,11 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -20,10 +24,13 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build -- --base-href /ProCalendarLanding/
+        run: npm run build -- --base-href=/ProCalendarLanding/
+
+      - name: Add .nojekyll
+        run: touch dist/procalendar-landing/browser/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/pro-calendar-landing/browser
+          publish_dir: ./dist/procalendar-landing/browser

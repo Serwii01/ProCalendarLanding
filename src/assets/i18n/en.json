@@ -5,7 +5,7 @@
   "nav.privacy": "Privacy",
   "nav.github": "View on GitHub",
 
-  "hero.badge": "v0.2 available",
+  "hero.badge": "v1.0 available",
   "hero.title.1": "The calendar designed for",
   "hero.title.2": "extreme performance",
   "hero.subtitle": "Local-first client with bidirectional sync to Google Calendar and iCloud. Privacy by design: your credentials never leave your machine.",
@@ -27,6 +27,16 @@
   "features.dnd.title": "Intuitive drag & drop",
   "features.dnd.desc": "Redesign your day in seconds with a fluid interface and natural physics.",
 
+  "showcase.title": "The app in action",
+  "showcase.sub": "Designed with the polish you expect from macOS, on any operating system.",
+  "showcase.week": "Week view",
+  "showcase.day": "Day view",
+  "showcase.month": "Month view",
+  "showcase.tasks": "Task manager",
+  "showcase.create": "Create / edit event",
+  "showcase.accounts": "Accounts & credentials",
+  "showcase.sync": "Auto-sync",
+
   "download.title": "Get started today",
   "download.sub": "Available for 64-bit Windows. Choose your preferred package.",
   "download.installer.title": "Standard installer",
@@ -34,8 +44,9 @@
   "download.portable.title": "Portable edition",
   "download.portable.desc": "Run directly from a folder or USB drive. No install required.",
   "download.recommended": "RECOMMENDED",
-  "download.msi.title": "MSI package",
-  "download.msi.desc": "Designed for enterprise deployment and Active Directory management.",
+  "download.docs.title": "Documentation",
+  "download.docs.desc": "Full installation guide, Google and iCloud sync setup, and troubleshooting.",
+  "download.docs.cta": "Read the guide",
 
   "help.title": "Help & setup",
   "help.subtitle": "Connect your external calendars. Real-time bidirectional sync with Google and iCloud.",
