@@ -5,7 +5,7 @@
   "nav.privacy": "Privacidad",
   "nav.github": "Ver en GitHub",
 
-  "hero.badge": "v0.2 disponible",
+  "hero.badge": "v1.0 disponible",
   "hero.title.1": "El calendario diseñado para",
   "hero.title.2": "máximo rendimiento",
   "hero.subtitle": "Cliente local con sincronización bidireccional Google Calendar e iCloud. Privacidad por diseño: tus credenciales nunca salen de tu equipo.",
@@ -27,6 +27,16 @@
   "features.dnd.title": "Drag & drop intuitivo",
   "features.dnd.desc": "Reorganiza tu día en segundos con una interfaz fluida y físicas naturales.",
 
+  "showcase.title": "La app en acción",
+  "showcase.sub": "Diseñada con el detalle que esperas de macOS, en cualquier sistema operativo.",
+  "showcase.week": "Vista semanal",
+  "showcase.day": "Vista día",
+  "showcase.month": "Vista mensual",
+  "showcase.tasks": "Gestor de tareas",
+  "showcase.create": "Crear / editar evento",
+  "showcase.accounts": "Cuentas y credenciales",
+  "showcase.sync": "Sincronización automática",
+
   "download.title": "Empieza ahora",
   "download.sub": "Disponible para Windows de 64 bits. Elige tu paquete preferido.",
   "download.installer.title": "Instalador estándar",
@@ -34,8 +44,9 @@
   "download.portable.title": "Edición portable",
   "download.portable.desc": "Ejecuta directamente desde tu carpeta o USB. No requiere instalación.",
   "download.recommended": "RECOMENDADO",
-  "download.msi.title": "Paquete MSI",
-  "download.msi.desc": "Diseñado para despliegues corporativos y gestión vía Active Directory.",
+  "download.docs.title": "Documentación",
+  "download.docs.desc": "Guía completa de instalación, sincronización con Google e iCloud, y solución de problemas.",
+  "download.docs.cta": "Leer la guía",
 
   "help.title": "Ayuda y configuración",
   "help.subtitle": "Conecta tus calendarios externos. Sincronización bidireccional con Google e iCloud en tiempo real.",
